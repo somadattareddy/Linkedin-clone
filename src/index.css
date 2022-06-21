@@ -1,0 +1,397 @@
+*{
+  margin: 0;
+}
+
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
+
+.app{
+  background-color: #f3f2ef;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.header{
+  position: sticky;
+  top: 0;
+  display: flex;
+  width: 100%;
+  background-color: white;
+  padding: 5px 20px;
+  justify-content: space-evenly;
+  border-bottom: 0.1px solid lightgray;
+}
+
+.headerLeft{
+  display: flex;
+  align-items: center;
+}
+
+.headerLeft img{
+  object-fit: contain;
+  height: 40px;
+  margin-right: 10px;
+}
+
+.searchbar{
+  padding: 10px;
+  margin-top: 3px;
+  display: flex;
+  align-items: center;
+  border-radius: 5px;
+  height: 22px;
+  color: gray;
+  background-color: #eef3f8;
+}
+
+.searchbar input{
+  outline: none;
+  background: none;
+  border: none;
+  margin-bottom: 2px;
+}
+
+.headerRight{
+  display: flex;
+}
+
+.headeroption{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-right: 20px;
+  color: gray;
+  cursor: pointer;
+}
+
+.headeroption:hover{
+  color: black;
+}
+
+.headertitle{
+  font-size: 15px;
+}
+
+.appbody{
+  display:flex;
+  margin-top: 35px;
+  max-width: 1200px;
+  margin-left: 20px;
+  margin-right: 20px;
+}
+
+.sidebar{
+  position: sticky;
+  top:80px;
+  flex: 0.2;
+  border-radius: 10px;
+  text-align: center;
+  height: fit-content;
+}
+
+.sidebartop{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border: 1px solid lightgray;
+  border-bottom: 0;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+  background-color: white;
+  padding-bottom: 10px;
+}
+
+.sidebaravatar{
+  margin-bottom: 10px;
+}
+
+.sidebartop img{
+  margin-bottom: -20px;
+  width: 100%;
+  border-top-left-radius: 10px;
+  border-top-right-radius:10px;
+  object-fit: cover;
+}
+
+.sidebartop h2{
+  font-size: 18px;
+}
+
+.sidebartop h4{
+  color: gray;
+  font-size: 12px;
+
+}
+
+.sidebarstats{
+  padding:10px;
+  margin-bottom: 10px;
+  border: 1px solid lightgray;
+  background-color: white;
+  border-bottom-left-radius: 10px;
+  border-bottom-right-radius: 10px;
+}
+
+.sidebarstat{
+  margin-top: 10px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.sidebarstat p{
+  color: gray;
+  font-size: 13px;
+  font-weight: 600;
+}
+
+.statnum{
+  font-weight: bold;
+  color: #0a66c2 !important;
+}
+
+.sidebarbottom{
+  text-align: left;
+  padding: 10px;
+  border: 1px solid lightgray;
+  background-color: white;
+  border-radius: 10px;
+  margin-top: 10px;
+}
+
+.sidebarrecitem{
+  display: flex;
+  font-size: 13px;
+  color: gray;
+  font-weight: bolder;
+  cursor: pointer;
+  margin-bottom: 5px;
+  padding: 5px;
+}
+
+.sidebarrecitem:hover{
+  background-color: whitesmoke;
+  border-radius: 10px;
+  cursor: pointer;
+  color: black;
+}
+
+.sidebarhash{
+  margin-left: 5px;
+  margin-right: 10px;
+}
+
+.sidebarbottom p{
+  padding-bottom: 10px;
+  font-size: 13px;
+}
+
+.feed{
+  flex: 0.6;
+  margin: 0 20px;
+}
+
+.feedinputcontainer{
+  background-color: white;
+  padding:10px;
+  padding-bottom: 20px;
+  border-radius: 10px;
+  margin-bottom:20px;
+}
+
+.feedinput{
+  border: 1px solid lightgray;
+  border-radius: 30px;
+  display: flex;
+  padding:10px;
+  color: gray;
+  padding-left: 15px;
+}
+
+.feedinput form{
+  display: flex;
+  width: 100%;
+}
+
+.feedinput form input{
+  border: none;
+  flex: 1;
+  margin-left: 10px;
+  outline-width: 0;
+  font-weight: 600;
+}
+
+.feedinput form button{
+  display: none;
+}
+
+.feedinputoptions{
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.inputoption{
+  display: flex;
+  align-items: center;
+  margin-top: 15px;
+  color: gray;
+  padding: 10px;
+  cursor: pointer;
+}
+
+.inputoption:hover{
+  background-color: lightgray;
+  border-radius: 10px;
+}
+
+.inputoption h4{
+  margin-left: 5px;
+}
+
+.post{
+  background-color: white;
+  padding: 15px;
+  margin-bottom: 10px;
+  border-radius: 10px;
+}
+
+.postheader{
+  display: flex;
+  margin-bottom: 10px;
+}
+
+.postinfo{
+  margin-left: 10px;
+}
+
+.postinfo p{
+  font-size: 12px;
+  color: gray;
+}
+
+.postbody{
+  overflow-wrap: anywhere;
+}
+
+.postinfo h2{
+  font-size: 15px;
+}
+
+.postbuttons{
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.login{
+  display: grid;
+  place-items: center;
+  margin-left: auto;
+  margin-right: auto;
+  padding-top: 100px;
+  padding-bottom: 100px;
+}
+
+.login img{
+  object-fit: contain;
+  height: 70px;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+.login form{
+  display: flex;
+  flex-direction: column;
+}
+
+.login form input{
+  width: 350px;
+  height: 50px;
+  font-size: 20px;
+  padding-left: 10px;
+  border-radius: 5px;
+  margin-bottom: 10px;
+}
+
+.login form button{
+  width: 365px;
+  height: 50px;
+  font-size: large;
+  color: #fff;
+  background-color: #0074b1;
+  border-radius: 5px;
+}
+
+.loginregister{
+  color: #0177b7;
+  cursor: pointer;
+}
+
+.login p{
+  margin-top: 20px;
+}
+
+.widgets{
+  position: sticky;
+  top: 80px;
+  flex: 0.2;
+  background-color: white;
+  border-radius: 10px;
+  border: 1px solid lightgray;
+  height: fit-content;
+  padding-bottom: 10px;
+}
+
+.widgetheader{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px;
+}
+
+.widgetheader h2{
+  font-size: 16px;
+  font-weight: 400;
+}
+
+.widgetarticle{
+  display: flex;
+  padding: 10px;
+  cursor: pointer;
+}
+
+.widgetarticle:hover{
+  background-color: whitesmoke;
+}
+
+.widgetarticleleft{
+  color: #0177b7;
+  margin-right: 5px;
+}
+
+.widgetarticleleft .MuiSvgIcon-root{
+  font-size: 15px;
+}
+
+.widgetarticleright{
+  flex: 1;
+}
+
+.widgetarticleright h4{
+  font-size: 14px;
+}
+
+.widgetarticleright p{
+  font-size: 12px;
+  color: gray;
+}
